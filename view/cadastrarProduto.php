@@ -67,8 +67,29 @@
 
                 <div id="form-cadastro-descricao">
                     <label for="cxDescricao">Descricao:</label>
-                    <input placeholder="detalhe mais sobre o produto" type="text" name="descricao" id="cxDescricao">
-                </div>
+</div>
+<div id="form-cadastro-imagem" class="col-md-6">
+                <label for="lblImagem" class="form-label">Adicionar imagem do produto:</label>
+                    <input id="img-input" type="file" name="imagem" title="Usar arquivo com dimensões 300x300">
+              </div>
+              <div id="img-container">
+            <img id="preview" src="" style="justify-content:center;">
+        </div>
+
+        <script>
+            function readImage() {
+    if (this.files && this.files[0]) {
+        var file = new FileReader();
+        file.onload = function(e) {
+            document.getElementById("preview").src = e.target.result;
+        };       
+        file.readAsDataURL(this.files[0]);
+    }
+}
+
+document.getElementById("img-input").addEventListener("change", readImage, false);
+        </script>
+             
 
                 <button type="submit" method="post">Cadastrar Produto</button>
             </form>
