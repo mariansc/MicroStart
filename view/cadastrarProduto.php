@@ -66,7 +66,7 @@
               </div>
               <div id="form-cadastro-imagem" class="col-md-6">
                 <label for="lblImagem" class="form-label">Adicionar imagem do produto:</label>
-                <input id="img-input" type="file" name="imagem" title="Usar arquivo com dimensões 300x300">
+               <input id="img-input" type="file" name="imagem" title="Usar arquivo com dimensões 300x300">
               </div>
               <div id="img-container">
             <img id="preview" src="" style="justify-content:center;">
